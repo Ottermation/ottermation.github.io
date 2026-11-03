@@ -1,0 +1,10 @@
+<div class="large-socials">
+    {{ range .Site.Params.socialIcons }}
+        {{ $label := (.title | default .name) | title }}
+        <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+            title="{{ $label }}">
+            {{ partial "svg.html" . }}
+            <h1>{{ $label }}</h1>
+        </a>
+    {{ end }}
+</div>

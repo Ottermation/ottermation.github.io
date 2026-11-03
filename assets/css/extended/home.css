@@ -1,0 +1,7 @@
+.hero-text {
+    color: var(--color-accent-foreground);
+    font-family: "Darumadrop One", sans-serif;
+    text-align: center;
+    font-size: 56pt !important;
+    text-shadow: 2pt 2pt var(--color-foreground)
+}

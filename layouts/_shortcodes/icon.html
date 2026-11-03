@@ -1,0 +1,10 @@
+{{ $vendor := index .Params 0 }}
+{{ $icon := index .Params 1 }}
+{{ $link := index .Params 2 }}
+<div class="social-icons">
+    <a href="{{ $link }}" target="_blank" rel="noopener noreferrer me"
+        title="{{ $icon }}">
+        {{ $ctx := dict "vendor" $vendor "name" $icon }}
+        {{ partial "icons/icon" $ctx }}
+    </a>
+</div>

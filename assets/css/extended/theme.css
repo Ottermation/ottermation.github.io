@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "Darumadrop One";
+    src: url("/fonts/DarumadropOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("/fonts/Rubik-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("/fonts/Rubik-Bold.ttf");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("/fonts/Rubik-Italic.ttf");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("/fonts/Rubik-BoldItalic.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    --color-teal: #57AEA6;
+    --color-dark-teal: #30605C;
+    --color-cream: #EAE2CF;
+    --color-yellow: #F1B966;
+    --color-brown: #B58468;
+    --color-dark-brown: #684C3B;
+    --color-black: #3E3E3E;
+    --color-green: #9CA681;
+
+    --color-foreground: var(--color-black);
+    --color-background: var(--color-cream);
+    --color-accent-background: var(--color-teal);
+    --color-accent-foreground: var(--color-dark-teal);
+    --color-accent-background-secondary: var(--color-brown);
+    --color-accent-foreground-secondary: var(--color-dark-brown);
+
+    --code-bg: var(--color-cream);
+    --theme: var(--color-cream);
+    --primary: var(--color-black);
+
+    --full-header-height: 100px;
+    --full-footer-height: 70px;
+}
+
+:root[data-theme="dark"] {
+    --code-bg: var(--color-black);
+    --primary: var(--color-cream);
+    --color-foreground: var(--color-cream);
+    --color-background: var(--color-black);
+    --color-accent-background: var(--color-dark-teal);
+    --color-accent-foreground: var(--color-teal);
+    --color-accent-background-secondary: var(--color-dark-brown);
+    --color-accent-foreground-secondary: var(--color-brown);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Darumadrop One", sans-serif;
+    color: var(--color-foreground);
+}
+
+body, .post-content {
+    font-family: "Rubik";
+    color: var(--color-foreground);
+}
+
+main {
+    min-height: calc(100vh - var(--full-header-height) - var(--full-footer-height)) !important;
+}
+
+.large-socials {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.large-socials a {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    height: 4em;
+    background-color: var(--color-accent-background);
+    text-decoration: none !important;
+    border-radius: 4pt;
+    padding: 0em 1em;
+}
+
+.large-socials svg {
+    width: 3em;
+}
+
+.large-socials h1 {
+    text-wrap: nowrap;
+    margin: 0;
+    margin-top: 6pt;
+}

@@ -1,0 +1,12 @@
+{{ $name := index .Params 0 }}
+{{ $role := index .Params 1 }}
+{{ $image := index .Params 2 }}
+
+<div class="team-card">
+    <img src="{{ $image }}" alt="{{ $name }} profile image">
+    <h2>{{ $name }}</h2>
+    <i>{{ $role }}</i>
+    <div class="icon-row">
+        {{ .Inner }}
+    </div>
+</div>

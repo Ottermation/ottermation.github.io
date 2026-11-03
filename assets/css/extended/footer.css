@@ -1,0 +1,19 @@
+.footer-social-icons {
+
+}
+
+.footer .social-icons {
+    display: inline-flex;
+    font-size: 18pt;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    gap: 0.25em;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer {
+    padding: 0;
+}

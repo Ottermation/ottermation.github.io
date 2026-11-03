@@ -1,0 +1,22 @@
+.steam-link {
+    display: flex;
+    justify-content: center;
+}
+
+.steam-link a {
+    display: inline-flex;
+    background: var(--color-accent-background);
+    padding: 0.5em;
+    flex-direction: row;
+    border-radius: 4pt;
+    gap: 1em;
+    text-decoration: none !important;
+}
+
+.steam-link svg {
+    width: 2.75em;
+}
+
+.steam-link h2 {
+    margin: 0;
+}

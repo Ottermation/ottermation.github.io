@@ -1,0 +1,95 @@
+.header {
+    font-family: "Darumadrop One", sans-serif;
+}
+
+.header-container {
+    background: var(--color-accent-background);
+}
+
+.flex-gap {
+    flex-grow: 1;
+}
+
+.waves {
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    inset: 0;
+    background: var(--color-accent-background);
+    opacity: var(--wave-opacity, 1);
+    mask:
+        radial-gradient(
+            calc(2.236 * var(--wave-height))
+            at 50% calc(100% - var(--wave-height) * 3),
+            #000 99%, #0000 101%
+        )
+        calc(50% - var(--wave-height) * 2) 0 /
+        calc(var(--wave-height) * 4) 100%,
+
+        radial-gradient(
+            calc(2.236 * var(--wave-height))
+            at 50% calc(100% + var(--wave-height) * 2),
+            #0000 99%, #000 101%
+        )
+        50% calc(100% - var(--wave-height)) /
+        calc(var(--wave-height) * 4) 100%;
+
+    mask-repeat: repeat-x, repeat-x;
+    animation: wave-side-to-side var(--wave-speed) ease-in-out infinite alternate;
+}
+
+.wave-back {
+  --wave-height: 18px;
+  --wave-speed: 14s;
+  --wave-opacity: 0.45;
+}
+
+.wave-middle {
+  --wave-height: 24px;
+  --wave-speed: 9s;
+  --wave-opacity: 0.7;
+}
+
+.wave-front {
+  --wave-height: 30px;
+  --wave-speed: 6s;
+}
+
+@keyframes wave-side-to-side {
+  from {
+    mask-position:
+      calc(50% - var(--wave-height) * 2) 0,
+      50% calc(100% - var(--wave-height));
+  }
+
+  to {
+    mask-position:
+      calc(50% + var(--wave-height) * 2) 0,
+      calc(50% + var(--wave-height) * 4) calc(100% - var(--wave-height));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wave {
+        animation: none;
+    }
+}
+
+.menu a {
+    font-size: 18pt;
+}
+
+.menu .active {
+
+}
+
+.header-icon-image {
+    width: 48px;
+    height: 48px;
+    margin-right: -24px;
+    transform: translateY(4px);
+}

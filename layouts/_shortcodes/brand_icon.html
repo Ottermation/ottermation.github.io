@@ -1,0 +1,9 @@
+{{ $icon := index .Params 0 }}
+{{ $link := index .Params 1 }}
+<div class="social-icons">
+    <a href="{{ $link }}" target="_blank" rel="noopener noreferrer me"
+        title="{{ $icon }}">
+        {{ $dict := dict "name" $icon }}
+        {{ partial "svg.html" $dict }}
+    </a>
+</div>
